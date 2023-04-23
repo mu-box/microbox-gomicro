@@ -5,11 +5,11 @@
 VERSION=		0.1.0
 # PKGREVISION=		1
 DISTNAME=		narc-${VERSION}
-CATEGORIES=		pagodabox
-MASTER_SITES=		https://bitbucket.org/pagodabox-logvac/narc
+CATEGORIES=		microbox
+MASTER_SITES=		https://github.com/mu-box/narc
 
 MAINTAINER=		tyler@pagodabox.com
-HOMEPAGE=		https://bitbucket.org/pagodabox-logvac/narc
+HOMEPAGE=		https://github.com/mu-box/narc
 COMMENT=		Watches log files for logvac
 LICENSE=		cddl-1.0
 
@@ -33,7 +33,7 @@ BUILDLINK_TREE+=	-libuv
 
 
 GIT_REPOSITORIES=	narc
-GIT_REPO.narc=		git@bitbucket.org:pagodabox-logvac/narc.git
+GIT_REPO.narc=		git@github.com:mu-box/narc.git
 GIT_TAG=		v${VERSION}
 # GIT_TAG=		master
 
@@ -78,5 +78,5 @@ pre-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/narc.conf ${DESTDIR}${EGDIR}/narc.conf.example
 
-.include "../../gonano/git/git-package.mk"
+.include "../../gomicro/git/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

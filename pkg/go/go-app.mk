@@ -31,7 +31,7 @@ go-symlink:
 	@${LN} -s ${WRKSRC} ${GOPATH}/src/${GO_DOMAIN}/${GO_USER}/${GO_PROJECT}
 
 go-get: go-symlink
-	@cd ${GOPATH}/src/${GO_DOMAIN}/${GO_USER}/${GO_PROJECT} && GOPATH=${GOPATH} ${PKGSRCDIR}/gonano/go/files/go-get.sh .
+	@cd ${GOPATH}/src/${GO_DOMAIN}/${GO_USER}/${GO_PROJECT} && GOPATH=${GOPATH} ${PKGSRCDIR}/gomicro/go/files/go-get.sh .
 
 go-build: go-get
 	@cd ${GOPATH}/src/${GO_DOMAIN}/${GO_USER}/${GO_PROJECT} && GOPATH=${GOPATH} go build
